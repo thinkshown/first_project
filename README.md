@@ -27,6 +27,7 @@
     <li><a href="#quote">Quote</a></li>
     <li><a href="#links">Links</a></li>
     <li><a href="#pictures">Pictures</a></li>
+    <li><a href="#checkbox">Checkbox</a></li>
   </ol>
 </details>
 
@@ -47,6 +48,8 @@ _The first line._
 __The second line.__  
 ___The third line.___  
 
+<p align="right"><a href="#readme-top">back to top</a></p>
+
 ## The lists
 
 ### Unordered list
@@ -60,6 +63,8 @@ ___The third line.___
 1. The first line.
 2. The second line.
 3. The third line.
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ___
 
@@ -76,9 +81,13 @@ git status
 git commit -m 'test'
 ```
 
+<p align="right"><a href="#readme-top">back to top</a></p>
+
 ## Quote
 
 > «Quote!» - Sanya
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Links
 
@@ -86,11 +95,18 @@ git commit -m 'test'
 2. [GitHub Homepage](https://github.com)
 3. [GitHub Homepage](https://github.com "Main page of GitHub")
 
-<p align="right">
-  <a href="#readme-top">back to top</a>
-</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Pictures
 
-![Каракорум](https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Shadowed_Giants.jpg/1920px-Shadowed_Giants.jpg?utm_source=ru.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-[![Алтайские горы](https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/%D0%92_%D0%B3%D0%BE%D1%80%D0%BD%D0%BE%D0%B9_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B5.jpg/1920px-%D0%92_%D0%B3%D0%BE%D1%80%D0%BD%D0%BE%D0%B9_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B5.jpg?utm_source=ru.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)](https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%B3%D0%BE%D1%80%D1%8B)
+![Каракорум](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Baltoro_glacier_from_air.jpg/1280px-Baltoro_glacier_from_air.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+[![Алтайские горы](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/GoraBeluha.jpg/1280px-GoraBeluha.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)](https://en.wikipedia.org/wiki/Altai_Mountains)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+## Checkbox
+
+- [ ] without x
+- [x] with x 
+
+<p align="right"><a href="#readme-top">back to top</a></p>
