@@ -1,5 +1,11 @@
 <a id="readme-top"></a>
 
+<!-- It's invisible
+text on two lines -->
+
+[comment]: # (It's one-line invisible text)
+[//]: # (It's one-line invisible text)
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -28,10 +34,12 @@
     <li><a href="#links">Links</a></li>
     <li><a href="#pictures">Pictures</a></li>
     <li><a href="#checkbox">Checkbox</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#comments">Comments</a></li>
   </ol>
 </details>
 
-## Main Heading
+## Main Heading 😸
 
 Just a text.  
 And a bit more.
@@ -107,6 +115,19 @@ git commit -m 'test'
 ## Checkbox
 
 - [ ] without x
-- [x] with x 
+- [x] with x
+  - [x] subcheckbox
+  - [ ] not x subckeckbox  
 
 <p align="right"><a href="#readme-top">back to top</a></p>
+
+## Table
+
+|Name|Height|Image|
+|:-|:-:|-:|
+|Altai Mountains | Belukha, 4506 m     | <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/2006-07_altaj_belucha.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" width="250"/>    | 
+|Pamir Mountains | Kongur Tagh, 7649 m | <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Kongur_south.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" width="250"/>     |
+|Andes           | Aconcagua, 6961 m   | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Monte_Aconcagua.jpg/1280px-Monte_Aconcagua.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" width="250"/> |
+
+## Comments
+
