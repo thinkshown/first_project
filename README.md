@@ -129,5 +129,10 @@ git commit -m 'test'
 |Pamir Mountains | Kongur Tagh, 7649 m | <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Kongur_south.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" width="250"/>     |
 |Andes           | Aconcagua, 6961 m   | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Monte_Aconcagua.jpg/1280px-Monte_Aconcagua.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" width="250"/> |
 
+<p align="right"><a href="#readme-top">back to top</a></p>
+
 ## Comments
 
+<!-- It's free space because all text was commented -->
+
+<p align="right"><a href="#readme-top">back to top</a></p>
