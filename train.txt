@@ -23,7 +23,7 @@ git config --global color.ui true - включение цветного выво
 
 git status - показывает изменение в рабочем каталоге и статус
 
-git log - показывает историю коммитов 
+git log - показывает историю коммитов
 git log --oneline - показывает историю коммитов в компактном виде
 git log --stat - посмотреть статистику по коммитам
 git log -p - просмотр патчей (деталей каждого изменения) по коммитам
@@ -32,6 +32,7 @@ git log --graph - отображение веток в истории комми
 git log --author="author_name" - фильтр коммитов по автору
 git log --pretty=format:"spec_formats" - форматирование вывода лога
 git log --since="2012-01-01" --until="2012-12-31" - фильтрация коммитов по датам "до" и "после"
+git log --all - показывает историю коммитов из всех веток (локальных и удаленных)
 
 git shortlog - компактный отчёт о коммитах в репозитории группирует коммиты по авторам и выводит список их имён вместе с количеством, сделанных ими коммитов и краткими описаниями этих коммитов
 git shortlog -e - показывает почту рядом с именем автора коммита
@@ -113,10 +114,10 @@ git remote add origin <URL> - связать локальный репозито
 git remote set-url origin <URL> - меняем веб-адрес главного удаленного репозитория с именем origin (при переходе с HTTPS на SSH, например)
 git remote -v - показывает список всех связанных удаленных репозиториев (fetch - откуда Git забирает изменения (git pull, git fetch), push - куда Git отправляет изменения (git push))
 
+git push - пушит текущую ветку
+git push <branch_name> - пушит конкретную ветку (перечислять через пробел)
 git push -u origin master - отправить локальные коммиты на удаленный репозиторий (флаг -u связывает локальную ветку master с удаленной origin, после отправки этого пуша дальше можно просто писать git push)
-git push -u origin --all - отправить все локальные ветки (--all) в удаленный репозиторий (origin)
-
-git branch - проверить в какой ветке находимся
+git push --all origin - отправить все локальные ветки (которые отсутствуют в origin репозитории --all) в удаленный репозиторий (origin - имя репозитория)
 
 git clone <URL> - копировать гит-репозиторий к себе на комп (URL с гитхаба)
 git clone --depth=5 <URL> - копировать последние 5 коммитов (указываем глубину репозитория, которую хотим иметь на данной локальной машине)
@@ -147,8 +148,40 @@ Host github-work
     IdentityFile ~/.ssh/work_ssh
 / URL - git@github-work:thinkshown/three-axes-rescue.git и ключ для него - work_ssh
 
-git checkout <name> - переключает на существующую ветку
-git checkout -b <name> - создает новую ветку с именем name и переключается на нее (b - branch)
+git branch - показывает список всех локальных веток (текущая со знаком *)
+git branch -a - показывает список всех локальных и удаленных веток (a - all)
+git branch -r - показывает только удаленные ветки (r - remote)
+git branch -v - показывает последний коммит каждый ветки
+git branch -vv - связь локальных и удаленных веток
+git branch <branch_name> - создать ветку с именем <branch_name>
+git branch <branch_name> <commitfix_id> - создает ветку с именем <branch_name> от коммита <commit_id>
+git branch -d <branch_name> - удаление пустой (или смерженной) ветки с именем <branch_name> (d - delete)
+git branch -D <branch_name> - форсированное удаление непустой ветки с именем <branch_name>
+git branch -m <old_name> <new_name> - переименовать ветку с <old_name> в <new_name>
+git branch --list '*feature*' - поиск веток с вхождением слова 'feature'
+
+git checkout <name> / git switch <name> - переключает на существующую ветку
+git checkout -b <name> / git switch -c <name> - создает новую ветку с именем name и переключается на нее (b - branch, c - create)
+git checkout <commit_id> / git switch --detached <commit_id> - переключиться на коммит <commit_id>
+git checkout - / git switch - - позволяет переключиться на предыдущую ветку
+git checkout --ours <file_name> - оставить файлы в том состоянии, в котором они находились в текущей ветке до merge
+git checkout --theirs <file_name> - оставить файлы в том состоянии, в котором они находятся в сливаемой ветке (пренебрегаем изменениями в нашей ветке) 
+
+git merge <branch_name> - слить текущую ветку (в которой находимся) с <branch_name>
+fast forward merge (линейное слияние/быстрое слияние) - не создает merge commit, если в главной ветке не было изменений
+git merge --no-ff <branch_name> - слияние без fast forward (принудительно создает merge commit, даже если в главной ветке не было изменений)
+git merge -m <branch_name> - позволяет указать сообщение при merge commit (m - message)
+ПЕРЕД git merge нужно делать git pull чтобы подтянуть все изменения, которые сделали другие программисты
+При merge conflict в файлах появляется следующее:
+<<<<<<< HEAD 		      - Ваши изменения (текущая ветка) 
+        color: blue;            Ваша версия кода
+=======				Разделитель
+        color: black;         - Чужие изменения (ветка, которую мержите)
+>>>>>>> feature/product-cart    Название чужой ветки
+git merge --abort - отметить процесс merging
+
+git stash - 
+git stash pop - 
 
 - nano
 nano 'имя файла' - открыть файл для редактирования в редакторе
