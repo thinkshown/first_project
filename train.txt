@@ -180,8 +180,25 @@ git merge -m <branch_name> - позволяет указать сообщени�
 >>>>>>> feature/product-cart    Название чужой ветки
 git merge --abort - отметить процесс merging
 
-git stash - 
-git stash pop - 
+git stash / git stash push - сохранить изменения в stash
+git stash -m "message" - сохранить изменения в stash с комментарием message
+git stash -u - сохранить и добавить неотслеживаемые файлы в stash (u - untracked)
+git stash -a - сохранить все в stash, включая игнорируемые файлы
+git stash -p - откроет интерактивный режим добавления файла в stash (yes, no, quit, all, deny, edit, p - разделить)
+git stash -k / --keep-index - позволяет сохранить проиндексированные изменения и не удалять их из рабочей директории
+git stash pop - применить последний stash и удалить его
+git stash pop stash@{X} - извлекает из stash элемент с индексом X
+git stash list - показывает список имеющихся stash в этом репозитории
+stash@{0}: WIP on master: 9f26626 Merge branch 'feature/product-cart' - shash на ветке master, созданный после коммита 9f26626 Merge branch 'feature/product-cart'
+git stash apply - применить stash без удаления
+git stash apply stash@{X} - то же самое, что и apply, но элемент с индексом X
+git stash show - покажет список файлов в stash с индексом 0 (верхний в списке)
+git stash show -p - покажет список изменений в каждом файле в stash с индексом 0 (верхний в списке)
+git shash show -p stash@{X} - покажет список изменений в каждом файле в stash с индексом X
+git stash show -u - покажет список изменений в неотслеживаемых файлах (u - untracked)
+git stash drop - удаляет элемент из stash с индексом 0 (верхний в списке)
+git stash drop stash@{X} - удаляет элемент из stash с индексом X
+git stash clear - удалить все элементы из stash
 
 - nano
 nano 'имя файла' - открыть файл для редактирования в редакторе
